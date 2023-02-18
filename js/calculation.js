@@ -124,6 +124,37 @@ document.getElementById("btn_call-4").addEventListener('click', function () {
 })
 
 
+//Fifth Cart
+document.getElementById("btn_call-5").addEventListener('click', function () {
+    
+    serial = serial + 1;
+    const card_5Name = document.getElementById('fifth-name').innerText;
+    
+
+    const input_p = document.getElementById('input-p');
+    const input_b = document.getElementById('pentagon_b');
+
+    const newInput_p_String = input_p.value;
+    const newInput_b_String = input_b.value;
+
+
+    const newInput_p = parseFloat(newInput_p_String);
+
+    const newInput_b = parseFloat(newInput_b_String);
+
+
+    if (isNaN(newInput_p_String) || isNaN(newInput_b_String) || newInput_p_String == '' || newInput_b_String=='') {
+        return alert('Please provide a valid number');
+    }
+
+
+    const pentagon_result = 0.5 * newInput_p * newInput_b;
+
+    displayData(card_5Name, pentagon_result.toFixed(2))
+
+})
+
+
 
 
 
