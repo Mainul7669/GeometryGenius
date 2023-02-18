@@ -1,5 +1,6 @@
-//First Card
+
 let serial = 0;
+//First Card
 document.getElementById("btn_call").addEventListener('click', function () {
     
     serial = serial + 1;
@@ -11,7 +12,6 @@ document.getElementById("btn_call").addEventListener('click', function () {
 
     const newInput_b_String = input_b.value;
     const newInput_h_String = input_h.value;
-
 
     const newInput_b = parseFloat(newInput_b_String);
 
@@ -25,7 +25,8 @@ document.getElementById("btn_call").addEventListener('click', function () {
 
     const triangle_result = 0.5 * newInput_b * newInput_h;
 
-    displayData(card_1Name, triangle_result)
+    displayData(card_1Name, triangle_result.toFixed(2))
+
 
 })
 
@@ -56,9 +57,41 @@ document.getElementById("btn_call-2").addEventListener('click', function () {
 
     const rectangle_result = newInput_w * newInput_l;
 
-    displayData(card_2Name, rectangle_result)
+    displayData(card_2Name, rectangle_result.toFixed(2))
 
 })
+
+
+//Third Cart
+document.getElementById("btn_call-3").addEventListener('click', function () {
+    
+    serial = serial + 1;
+    const card_3Name = document.getElementById('third-name').innerText;
+    
+
+    const input_h = document.getElementById('input-h');
+    const input_b = document.getElementById('input-b');
+
+    const newInput_h_String = input_h.value;
+    const newInput_b_String = input_b.value;
+
+
+    const newInput_h = parseFloat(newInput_h_String);
+
+    const newInput_b = parseFloat(newInput_b_String);
+
+
+    if (isNaN(newInput_h_String) || isNaN(newInput_b_String) || newInput_h_String == '' || newInput_b_String=='') {
+        return alert('Please provide a valid number');
+    }
+
+
+    const parallelogram_result = newInput_h * newInput_b;
+
+    displayData(card_3Name, parallelogram_result.toFixed(2))
+
+})
+
 
 
 
