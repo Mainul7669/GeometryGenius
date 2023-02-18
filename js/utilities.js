@@ -5,3 +5,17 @@ const makeRandColor = () => {
     const b = Math.floor(Math.random() * 255);
     return `rgb(${r}, ${g}, ${b})`;
 }
+
+
+//Output serially
+function displayData(card_Name, calculatedResult) {
+    const container = document.getElementById('table-container')
+    //create new tr
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+<td>${serial}</td>
+<td>${card_Name}</td>
+<td>${calculatedResult}</td>
+`
+    container.appendChild(tr);
+}

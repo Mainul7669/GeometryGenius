@@ -1,3 +1,4 @@
+//First Card
 let serial = 0;
 document.getElementById("btn_call").addEventListener('click', function () {
     
@@ -29,16 +30,36 @@ document.getElementById("btn_call").addEventListener('click', function () {
 })
 
 
-function displayData(card_1Name, triangle_result) {
-    const container = document.getElementById('table-container')
-    //create new tr
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-<td>${serial}</td>
-<td>${card_1Name}</td>
-<td>${triangle_result}</td>
-`
-    container.appendChild(tr);
-}
+//Second Cart
+document.getElementById("btn_call-2").addEventListener('click', function () {
+    
+    serial = serial + 1;
+    const card_2Name = document.getElementById('second-name').innerText;
+    
+
+    const input_w = document.getElementById('input_w');
+    const input_l = document.getElementById('input_l');
+
+    const newInput_w_String = input_w.value;
+    const newInput_l_String = input_l.value;
+
+
+    const newInput_w = parseFloat(newInput_w_String);
+
+    const newInput_l = parseFloat(newInput_l_String);
+
+
+    if (isNaN(newInput_w_String) || isNaN(newInput_l_String) || newInput_w_String == '' || newInput_l_String=='') {
+        return alert('Please provide a valid number');
+    }
+
+
+    const rectangle_result = newInput_w * newInput_l;
+
+    displayData(card_2Name, rectangle_result)
+
+})
+
+
 
 
