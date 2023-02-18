@@ -93,6 +93,37 @@ document.getElementById("btn_call-3").addEventListener('click', function () {
 })
 
 
+//Fourth Cart
+document.getElementById("btn_call-4").addEventListener('click', function () {
+    
+    serial = serial + 1;
+    const card_4Name = document.getElementById('fourth-name').innerText;
+    
+
+    const input_d1 = document.getElementById('input_d1');
+    const input_d2 = document.getElementById('input_d2');
+
+    const newInput_d1_String = input_d1.value;
+    const newInput_d2_String = input_d2.value;
+
+
+    const newInput_d1 = parseFloat(newInput_d1_String);
+
+    const newInput_d2 = parseFloat(newInput_d2_String);
+
+
+    if (isNaN(newInput_d1_String) || isNaN(newInput_d2_String) || newInput_d1_String == '' || newInput_d2_String=='') {
+        return alert('Please provide a valid number');
+    }
+
+
+    const rhombus_result = 0.5 * newInput_d1 * newInput_d2;
+
+    displayData(card_4Name, rhombus_result.toFixed(2))
+
+})
+
+
 
 
 
