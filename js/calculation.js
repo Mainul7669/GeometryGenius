@@ -155,6 +155,34 @@ document.getElementById("btn_call-5").addEventListener('click', function () {
 })
 
 
+//Sixth Cart
+document.getElementById("btn_call-6").addEventListener('click', function () {
+    
+    serial = serial + 1;
+    const card_6Name = document.getElementById('sixth-name').innerText;
+    
 
+    const input_a = document.getElementById('input_a');
+    const input_b = document.getElementById('elipse_b');
+
+    const newInput_a_String = input_a.value;
+    const newInput_b_String = input_b.value;
+
+
+    const newInput_a = parseFloat(newInput_a_String);
+
+    const newInput_b = parseFloat(newInput_b_String);
+
+
+    if (isNaN(newInput_a_String) || isNaN(newInput_b_String) || newInput_a_String == '' || newInput_b_String=='') {
+        return alert('Please provide a valid number');
+    }
+
+
+    const ellipse_result = 3.14 * newInput_a * newInput_b;
+
+    displayData(card_6Name, ellipse_result.toFixed(2))
+
+})
 
 
