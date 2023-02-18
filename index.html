@@ -31,16 +31,16 @@
 
      <!-- card section -->
 <section>
-     <div class="flex space-x-40">
+     <div class="flex space-x-40 flex-col md:flex-row">
     
     <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-5">
 
 
 
-    <div id="random_color" class="card w-96 bg-primary-content shadow-xl pt-10">
+    <div id="card_1" class="card w-96 bg-primary-content shadow-xl pt-10">
         <figure><img src="/images/triangle.png" alt="Shoes" /></figure>
         <div class="card-body items-center text-black">
-          <h2 class="card-title">Triangle</h2>
+          <h2 id="first-name" class="card-title">Triangle</h2>
           <p>Area(A) = 0.5 <i class="fa-solid fa-xmark"></i> b <i class="fa-solid fa-xmark"></i> h</p>
 
           
@@ -49,7 +49,7 @@
             <div class="w-full md:w-1/2 px-3">
 
                 <label class="label space-x-2">
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="b">
+              <input id="input_b" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="b">
 
               <span>cm</span>
               </label>
@@ -58,7 +58,7 @@
             <div class="w-full md:w-1/2 px-3">
 
                 <label class="label space-x-2">
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="h">
+              <input id="input_h" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="h">
 
               <span>cm</span>
               </label>
@@ -68,7 +68,7 @@
 
 
             <div class="card-actions">
-            <button class="btn btn-info btn-wide text-white">Calculate</button>
+            <button id="btn_call" class="btn btn-info btn-wide text-white">Calculate</button>
         </div>
 
         </div>
@@ -76,10 +76,10 @@
 
 
 
- <div class="card w-96 bg-primary-content shadow-xl pt-10">
+ <div id="card_2" class="card w-96 bg-primary-content shadow-xl pt-10">
     <figure><img src="/images/rectangle.png" alt="Shoes" /></figure>
     <div class="card-body items-center text-black">
-      <h2 class="card-title">Rectangle</h2>
+      <h2 id="second-name" class="card-title">Rectangle</h2>
       <p>Area(A) = W <i class="fa-solid fa-xmark"></i> l</p>
 
       
@@ -113,10 +113,10 @@
     </div>
 </div>
 
- <div class="card w-96 bg-primary-content shadow-xl pt-10">
+ <div id="card_3" class="card w-96 bg-primary-content shadow-xl pt-10">
     <figure><img src="/images/parallelogram.png" alt="Shoes" /></figure>
     <div class="card-body items-center text-black">
-      <h2 class="card-title">Parallelogram</h2>
+      <h2 id="third-name" class="card-title">Parallelogram</h2>
       <p>Area(A) = b <i class="fa-solid fa-xmark"></i> h</p>
 
       
@@ -150,10 +150,10 @@
     </div>
 </div>
 
- <div class="card w-96 bg-primary-content shadow-xl pt-10">
+ <div id="card_4" class="card w-96 bg-primary-content shadow-xl pt-10">
     <figure><img src="/images/rhombus.png" alt="Shoes" /></figure>
     <div class="card-body items-center text-black">
-      <h2 class="card-title">Rhombus</h2>
+      <h2 id="fourth-name" class="card-title">Rhombus</h2>
       <p>Area(A) = 0.5 <i class="fa-solid fa-xmark"></i> d<sub>1</sub> <i class="fa-solid fa-xmark"></i> d<sub>2</sub></p>
 
       
@@ -187,10 +187,10 @@
     </div>
 </div>
 
-<div class="card w-96 bg-primary-content shadow-xl pt-10">
+<div id="card_5" class="card w-96 bg-primary-content shadow-xl pt-10">
     <figure><img src="/images/pentagon.png" alt="Shoes" /></figure>
     <div class="card-body items-center text-black">
-      <h2 class="card-title">Pentagon</h2>
+      <h2 id="fifth-name" class="card-title">Pentagon</h2>
       <p>Area(A) = 0.5 <i class="fa-solid fa-xmark"></i> p <i class="fa-solid fa-xmark"></i> b</p>
 
       
@@ -224,11 +224,11 @@
     </div>
 </div>
 
- <div class="card w-96 bg-primary-content shadow-xl pt-10">
+ <div id="card_6" class="card w-96 bg-primary-content shadow-xl pt-10">
     <figure><img src="/images/ellipse.png" alt="Shoes" /></figure>
     <div class="card-body items-center text-black">
-      <h2 class="card-title">Ellipse</h2>
-      <p>Area(A) = <img src="images/icons8-pi-16.png" alt="">ab</p>
+      <h2 id="sixth-name" class="card-title">Ellipse</h2>
+      <p>Area(A) = <span class="inline-flex"><img src="images/icons8-pi-16.png" alt="">ab</span></p>
 
       
       <div class="flex flex-wrap -mx-3 mb-6">
@@ -265,16 +265,22 @@
 
     <div class="card  justify-end w-96 bg-primary-content shadow-xl mt-10 mb-96">
         <div class="card-body items-center text-black">
-          <h2 class="card-title underline">Area of Calculation</h2>
-            </div>
-
-
+          <h2 class="card-title underline">Area of Calculation <span id="total_value"></span> </h2>
+          <div class="overflow-x-auto">
+            <table id="table-container" class="table w-full">
+            </table>
         </div>
+
+            </div>
+        </div>
+
 
         </div>
       </section>
 
 
+      <script src="js/utilities.js"></script>
       <script src="js/app.js"></script>
+      <script src="js/calculation.js"></script>
 </body>
 </html>
